@@ -7,7 +7,9 @@ const movies = require('./movies.json');
  * 
  */
 function getOnlyGoodMovies(metascore) { 
-    
+    //return movies.filter(movie => movie.metascore >= metascore);
+    const peliculas = movies.filter(movie => movie.metascore >= metascore);
+    console.log (peliculas);
 }
 
 /**
@@ -17,7 +19,12 @@ function getOnlyGoodMovies(metascore) {
  */
  function getGoodImdbLinks(){
 
-   
+    movies.forEach(function(element){
+        const title = element.imdb_title_id;
+        //return 'https://www.imdb.com/title/'+ title;
+        console.log('https://www.imdb.com/title/'+ title);
+       });
+       
    
 
 }
